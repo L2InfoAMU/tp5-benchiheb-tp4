@@ -18,6 +18,16 @@ public class BruteRasterImage implements Image {
         return width;
     }
 
+    @Override
+    public Color getPixelColor(int x, int y) {
+        final Color pixelColor = getPixelColor (x, y);
+        return pixelColor;
+    }
+
+
+
+
+
 
 
 
