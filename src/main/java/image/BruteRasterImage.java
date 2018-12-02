@@ -21,6 +21,15 @@ public class BruteRasterImage implements Image {
               pixels[i][j]= getPixelColor(x,y);
             }
     }
+
+    private void setPixelsColor(Color color){
+        for(int i=0;i<width;i++){
+            for(int j=0;j<height;j++){
+               Color pixelColor = getPixelColor(i,j);
+               pixelColor=color;
+            }
+        }
+    }
     @Override
     public int getHeight() {
         return height;
