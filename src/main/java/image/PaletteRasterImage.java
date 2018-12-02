@@ -6,6 +6,7 @@ public class PaletteRasterImage implements Image {
     private Color color;
     private int width;
     private int height;
+    private Color[][] pixels;
 
     public PaletteRasterImage(Color color, int width, int height) {
         this.width = width;
@@ -45,7 +46,16 @@ public class PaletteRasterImage implements Image {
     public void setPixelsColor(Color[][] pixels){
         for(int i=0; i<width ;i++)
             for (int j = 0; j < height; j++) {
-                getPixelColor(i,j)=pixels[i][j];
+                pixels[i][j]=color;
             }
+    }
+
+    public void setPixelColor(Color color, int x, int y){
+        if (pixels[x][y] != color) {
+            pixels[x][y]=color;
+        } else {
+            pixels[x][y] = color;
+        }
+
     }
 }
