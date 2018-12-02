@@ -8,6 +8,17 @@ public class BruteRasterImage implements Image {
     public Color color;
 
 
+    public BruteRasterImage(Color color, int width, int height){
+
+        this.width=width;
+        this.height=height;
+        this.color=color;
+    }
+
+
+
+
+
     public void setPixelColor(Color color, int x, int y){
         final Color pixelColor = getPixelColor(x, y);
     }
