@@ -7,6 +7,11 @@ public class BruteRasterImage implements Image {
     public  int width;
     public Color color;
 
+    public void setPixelColor(Color color, int x, int y){
+        final Color pixelColor = getPixelColor(x, y);
+    }
+
+
 
     @Override
     public int getHeight() {
@@ -32,6 +37,11 @@ public class BruteRasterImage implements Image {
     protected void setWidth(int width){
 
         this.width = width;
+    }
+
+    public void createRepresentation(){
+
+        int[][] window = new int[width][height];
     }
 
 
