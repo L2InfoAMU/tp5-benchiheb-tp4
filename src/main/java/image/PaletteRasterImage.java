@@ -14,6 +14,24 @@ public class PaletteRasterImage implements Image {
     }
 
     public void createRepresentation(){
-        private int[][] window = new int[width][height];
+        int[][] window = new int[width][height];
+    }
+
+    public int getHeight() {
+        return height;
+    }
+
+
+    public int getWidth(){
+        return width;
+    }
+    protected void setHeight(int height){
+
+        this.height = height;
+    }
+
+    protected void setWidth(int width){
+
+        this.width = width;
     }
 }
