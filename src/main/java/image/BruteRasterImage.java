@@ -1,6 +1,6 @@
 package image;
 
-import java.awt.Color;
+import java.awt.*;
 
 public class BruteRasterImage implements Image {
     public int height;
@@ -22,6 +22,16 @@ public class BruteRasterImage implements Image {
     public Color getPixelColor(int x, int y) {
         final Color pixelColor = getPixelColor (x, y);
         return pixelColor;
+    }
+
+    protected void setHeight(int height){
+
+        this.height = height;
+    }
+
+    protected void setWidth(int width){
+
+        this.width = width;
     }
 
 
