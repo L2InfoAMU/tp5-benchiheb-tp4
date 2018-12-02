@@ -74,9 +74,7 @@ public class BruteRasterImage implements Image {
 
 
 
-    public enum RasterImageType{
-        BRUTE
-    }
+
 
 
 
