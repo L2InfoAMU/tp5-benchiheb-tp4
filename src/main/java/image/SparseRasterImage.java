@@ -28,7 +28,14 @@ public class SparseRasterImage extends RasterImage{
             }
         }
     }
-
+    private void setPixelsColor(Color color){
+        for(int i=0;i<widht;i++){
+            for(int j=0;j<height;j++){
+                Color[][][][] pixels;
+                setPixelsColor(pixels[i][j])=color;
+            }
+        
+    }
     public int getWidht() {
         return widht;
     }
