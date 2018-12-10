@@ -14,12 +14,16 @@ public class RasterUniformImageFactory implements ImageFactory {
     }
 
     @Override
-    public Image makeImage() {
+    public BruteRasterImage makeImage() {
         switch (rasterImageType){
             case BRUTE:
                 return new BruteRasterImage(color, width, height);
             case PALETTE:
                 return new BruteRasterImage(color, width, height);
+            case SPARSE:
+                return new BruteRasterImage(color, width, height);
+
+
             default:
                 throw new NotSupportedException(rasterImageType + " is not supported");
         }

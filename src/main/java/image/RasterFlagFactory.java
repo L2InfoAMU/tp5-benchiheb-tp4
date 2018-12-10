@@ -2,6 +2,8 @@ package image;
 
 import javafx.scene.paint.Color;
 
+import java.awt.*;
+
 public class RasterFlagFactory implements ImageFactory {
 
     private int width;
@@ -21,7 +23,7 @@ public class RasterFlagFactory implements ImageFactory {
     }
 
     @Override
-    public Image makeImage() {
+    public BruteRasterImage makeImage() {
         Color[][] colors = new Color[width][height];
 
         for (int x = 0; x < width; x++) {
@@ -31,6 +33,10 @@ public class RasterFlagFactory implements ImageFactory {
         }
         switch (rasterImageType){
             case BRUTE:
+                return new BruteRasterImage(colors);
+            case PALETTE:
+                return new BruteRasterImage(colors);
+            case SPARSE:
                 return new BruteRasterImage(colors);
             default:
                 throw new NotSupportedException(rasterImageType + " is not supported");
