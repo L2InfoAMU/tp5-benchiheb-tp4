@@ -1,6 +1,7 @@
 package viewer;
 
 import image.*;
+import image.Image;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.canvas.Canvas;
@@ -29,6 +30,10 @@ public class Display implements Initializable {
         this.image = imageFactory.makeImage();
 
         imageFactory = new RasterFlagFactory(900, 600, Color.BLUE, Color.WHITE, Color.RED, RasterImageType.PALETTE);
+        this.image = imageFactory.makeImage();
+
+
+        imageFactory = new RasterFlagFactory(900, 600, Color.BLUE, Color.WHITE, Color.RED, RasterImageType.SPARSE);
         this.image = imageFactory.makeImage();
 
 
