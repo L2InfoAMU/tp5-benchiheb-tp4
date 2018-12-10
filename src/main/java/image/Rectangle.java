@@ -20,11 +20,11 @@ public class Rectangle implements Shape {
 
     @Override
     public boolean contains(Point point) {
-        return false;
+        return this.contains(point);
     }
 
     @Override
     public Color getColor() {
-        return getColor();
+        return this.getColor();
     }
 }
