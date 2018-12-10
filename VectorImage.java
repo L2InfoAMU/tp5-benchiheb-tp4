@@ -25,7 +25,7 @@ public class VectorImage implements Image {
         return height;
     }
 
-    public void setHeight(int height) {
+    protected int setHeight(int height) {
         this.height = height;
     }
 
@@ -34,7 +34,7 @@ public class VectorImage implements Image {
         return width;
     }
 
-    public void setWidth(int width) {
+   protected int setWidth(int width) {
         this.width = width;
     }
 }
