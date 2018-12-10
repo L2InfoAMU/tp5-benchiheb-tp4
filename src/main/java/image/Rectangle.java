@@ -17,4 +17,14 @@ public class Rectangle implements Shape {
         this.color = color;
         new Rectangle(x,y,width,height,color);
     }
+
+    @Override
+    public boolean contains(Point point) {
+        return false;
+    }
+
+    @Override
+    public Color getColor() {
+        return getColor();
+    }
 }
