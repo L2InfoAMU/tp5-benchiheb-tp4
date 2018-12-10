@@ -3,15 +3,14 @@ package image;
 
 import java.awt.*;
 
-public class BruteRasterImage implements Image {
-    private int height;
-    private   int width;
+public class BruteRasterImage extends RasterImage implements Image {
+    private final RasterImage rasterImage = new RasterImage();
 
 
     public BruteRasterImage(Color color, int width, int height){
 
-        this.width=width;
-        this.height=height;
+        this.rasterImage.setWidth(width);
+        this.rasterImage.setHeight(height);
     }
 
 
@@ -19,56 +18,46 @@ public class BruteRasterImage implements Image {
 
 
     public void setPixelColor(Color color, int x, int y){
-        final Color pixelColor = getPixelColor(x, y);
 
+        rasterImage.setPixelColor(color, x, y);
     }
 
 
     private void setPixelsColor(Color[][] pixels){
 
-        for(int i=0; i<width ;i++)
-            for (int j = 0; j < height; j++) {
-
-              pixels[i][j]= getPixelColor(i,j);
-            }
+        rasterImage.setPixelsColor(pixels);
     }
 
     private void setPixelsColor(Color color){
-        for(int i=0;i<width;i++){
-            for(int j=0;j<height;j++){
-               Color pixelColor = getPixelColor(i,j);
-               pixelColor=color;
-            }
-        }
+        rasterImage.setPixelsColor(color);
     }
 
     public int getHeight() {
-        return height;
+        return rasterImage.getHeight();
     }
 
 
     public int getWidth(){
-        return width;
+        return rasterImage.getWidth();
     }
 
     public Color getPixelColor(int x, int y) {
-        final Color pixelColor = getPixelColor (x, y);
-        return pixelColor;
+        return rasterImage.getPixelColor(x, y);
     }
 
     protected void setHeight(int height){
 
-        this.height = height;
+        rasterImage.setHeight(height);
     }
 
     protected void setWidth(int width){
 
-        this.width = width;
+        rasterImage.setWidth(width);
     }
 
     public void createRepresentation(){
 
-        int[][] window = new int[width][height];
+        rasterImage.createRepresentation();
     }
 
 
